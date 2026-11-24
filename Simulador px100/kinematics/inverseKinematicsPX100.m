@@ -17,8 +17,8 @@ function [joints,info] = inverseKinematicsPX100(targetWristBase,links, ...
         error('Faltam os limites das quatro juntas.');
     end
 
-    targetWristBase = double(targetWristBase(:)');
-    LA = hypot(double(links(2)),double(links(3)));
+    targetWristBase = double(targetWristBase(:)'); %converte para 1x3 indep. de onde vier
+    LA = hypot(double(links(2)),double(links(3))); %L2 e LM
     LB = double(links(4));
     beta = atan2(double(links(3)),double(links(2)));
     psi = pi/2-beta;
