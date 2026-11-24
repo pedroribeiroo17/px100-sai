@@ -1,6 +1,6 @@
 function pickRedCupPX100(robot, cfg, cup)
     grasp = cup.graspTargetBase;
-    approach = grasp + [0 0 cfg.approachClearance];
+    approach = grasp + [0 0 cfg.approachClearance]; %agarra o copo 80mm em z acima de xy do copo
 
     fprintf('\nCopo (Visão) [X, Y, Z]: [%.4f, %.4f, %.4f] m\n', grasp);
 
